@@ -1,0 +1,62 @@
+/*  ------------------------------------
+The program will play rock, paper, scissors;
+- Informs the user who the winner is. 
+----------------------------------------- */
+
+#include <iostream>
+#include <stdlib.h>
+
+int main() 
+{
+// Live long and prosper! 
+//The program will create a random number for 
+//the computer's choice;
+
+srand (time(NULL));
+
+int computer = rand() % 3 + 1;
+int user = 0;
+
+std::cout << "====================\n";
+std::cout << "rock - paper - scissors!\nChoose your number!\n";
+std::cout << "====================\n";
+
+std::cout << "1) ✊\n";
+std::cout << "2) ✋\n";
+std::cout << "3) ✌️\n";
+
+std::cout << "SHOOT!\n";
+std::cin >> user;
+
+std::cout << "====================\n";
+std::cout << "Computer choose: " << computer << std::endl;
+std::cout << "& \n";
+
+// Conditionals & logic;
+if(user==1 & computer==1)
+{std::cout << "It's a tie!\n";}
+else if(user==1 & computer==2)
+{std::cout << "You lost! Paper covers Rock!\n";}
+else if(user==1 & computer==3)
+{std::cout << "You won! Rock crushes Scissor!\n";}
+
+
+if(user==2 & computer==2)
+{std::cout << "It's a tie!\n";}
+else if(user==2 & computer==1)
+{std::cout << "You won! Paper covers Rock!\n";}
+else if(user==2 & computer==3)
+{std::cout << "You lost! Scissor cuts Paper!\n";}
+
+
+if(user==3 & computer==3)
+{std::cout << "It's a tie!\n";}
+else if(user==3 & computer==2)
+{std::cout << "You won! Scissor cuts Paper!\n";}
+else if(user==3 & computer==1)
+{std::cout << "You lost! Rock crushes Scissor!\n";}
+
+std::cout << "====================\n";
+
+return 0;
+} 
